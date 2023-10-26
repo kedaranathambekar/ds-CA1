@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "schema": "typescript-json-schema --noExtraProps --required --refs false -o ./shared/types.schema.json  \"./shared/types.d.ts\" \"*\""
   },
   "devDependencies": {
     "@aws-sdk/client-dynamodb": "^3.436.0",
