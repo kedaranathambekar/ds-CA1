@@ -44,7 +44,7 @@ export class RestAPIStack extends cdk.Stack {
         {
           architecture: lambda.Architecture.ARM_64,
           runtime: lambda.Runtime.NODEJS_16_X,
-          entry: `${__dirname}/../lambdas/getMovieById.ts`,
+          entry: `${__dirname}/../lambdas/getAllMovies.ts`,
           timeout: cdk.Duration.seconds(10),
           memorySize: 128,
           environment: {
