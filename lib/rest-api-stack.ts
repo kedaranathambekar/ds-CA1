@@ -105,6 +105,7 @@ export class RestAPIStack extends cdk.Stack {
             REGION: "eu-west-1",
           },
         });
+        
         new custom.AwsCustomResource(this, "moviesddbInitData", {
           onCreate: {
             service: "DynamoDB",
@@ -127,7 +128,7 @@ export class RestAPIStack extends cdk.Stack {
         moviesTable.grantReadWriteData(newMovieFn)
         moviesTable.grantReadWriteData(deleteMovie)
         movieCastsTable.grantReadData(getMovieCastMembersFn);
-        
+        movieCastsTable.grantReadWriteData(getMovieByIdFn);
         // REST API 
     const api = new apig.RestApi(this, "RestAPI", {
       description: "demo api",
@@ -171,7 +172,6 @@ export class RestAPIStack extends cdk.Stack {
       new apig.LambdaIntegration(deleteMovie, { proxy: true })
     );  
 
-  
   
    
       
