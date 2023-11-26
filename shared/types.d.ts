@@ -1,34 +1,40 @@
+import {MovieReview} from '../shared/types'
 
-// export type Movie = {
-//     movieId: number;
-//     genre_ids: number[];
-//     original_language : string;
-//     overview: string;
-//     popularity: number;
-//     release_date: string;
-//     title: string
-//     video: boolean;
-//     vote_average: number;
-//     vote_count: number
-//   }
-
-//   export type MovieCast = {
-//     movieId: number;
-//     actorName: string;
-//     roleName: string;
-//     roleDescription: string;
-//   };
-//   // Used to validate the query string og HTTP Get requests
-//   export type MovieCastMemberQueryParams = {
-//     movieId: string;
-//     actorName?: string;
-//     roleName?: string
-//   }
-
-  export type MovieReview = {
-    movieId: number;
-    reviewerName: string;
-    reviewDate: string;
-    reviewContent: string;
-    reviewRating: number;
-  }
+export const movieReviews : MovieReview[] = [
+  
+  {
+    MovieId: 1234,
+    ReviewerName: "kedhar",
+    ReviewDate: "2021-11-16",
+    Content: "Very funny movie. Would recommend",
+    Rating: 1
+},
+{
+    MovieId: 1234,
+    ReviewerName: "kedhar",
+    ReviewDate: "2023-11-17",
+    Content: "Great movie.",
+    Rating: 5
+},
+{
+    MovieId: 1234,
+    ReviewerName: "Kumar",
+    ReviewDate: "2008-06-16",
+    Content: "Enjoyed it.",
+    Rating: 10
+},
+{
+    MovieId: 4400,
+    ReviewerName: "kedhar",
+    ReviewDate: "2003-08-10",
+    Content: "Great movie",
+    Rating: 2
+},
+{
+    MovieId: 8954,
+    ReviewerName: "minions",
+    ReviewDate: "2020-11-25",
+    Content: "horror",
+    Rating: 7
+},
+];
