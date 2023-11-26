@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "MovieReview": {
+            "additionalProperties": false,
+            "properties": {
+                "Content": {
+                    "type": "string"
+                },
+                "MovieId": {
+                    "type": "number"
+                },
+                "Rating": {
+                    "type": "number"
+                },
+                "ReviewDate": {
+                    "type": "string"
+                },
+                "ReviewerName": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Content",
+                "MovieId",
+                "Rating",
+                "ReviewDate",
+                "ReviewerName"
+            ],
+            "type": "object"
+        },
+        "updateReview": {
+            "additionalProperties": false,
+            "properties": {
+                "Content": {
+                    "type": "string"
+                },
+                "Rating": {
+                    "type": "number"
+                },
+                "ReviewDate": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Content",
+                "Rating",
+                "ReviewDate"
+            ],
+            "type": "object"
+        }
+    }
+}
+
